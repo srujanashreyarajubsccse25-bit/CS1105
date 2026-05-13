@@ -32,9 +32,9 @@ git branch new-feature
 git checkout new-feature
 git checkout main
 git branch -d new-feature
-git clone https://github.com/shrehakumari/CS1105.git
+git clone https://github.com/srujanashreyarajubsccse25-bit/CS1105.git
 cd CS1105/
-git remote add upstream https://github.com/shrehakumari/CS1105.git
+git remote add upstream https://github.com/srujanashreyarajubsccse25-bit/CS1105.git
 git checkout -b fix-typo
 touch README.md
 git add README.md
