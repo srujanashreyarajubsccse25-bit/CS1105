@@ -1,7 +1,7 @@
 #4 install git & configure user credentials
 git --version
-git config --global user.name "Shreha Kumari"
-git config --global user.email "shrehakumaribsccse25@rvu.edu.in" 
+git config --global user.name "Srujana Shreya Raju"
+git config --global user.email "srujanashreyarajubsccse25@rvu.edu.in" 
 git config --list
 
 #5 initialize a new git repo & commit a sample file
@@ -18,6 +18,7 @@ git log
 
 #7 create & link a local repo with GitHub & push commits using git push
 git remote add origin https://github.com/user/repo.git
+git remote -v
 git branch -M main
 git push -u origin main
 
@@ -41,6 +42,7 @@ git commit -m "Fix typo in README"
 git push origin fix-typo
 
 #10 create feature branches, switch them & merge them using git
+mkdir merge-conflict-demo
 git init merge-conflict-demo
 cd merge-conflict-demo
 echo "Once upon a time, there was a coder." > story.txt
