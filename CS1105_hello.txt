@@ -1,7 +1,7 @@
 #4 install git & configure user credentials
 git --version
-git config --global user.name "Srujana Shreya Raju"
-git config --global user.email "srujanashreyarajubsccse25@rvu.edu.in" 
+git config --global user.name "Shreha Kumari"
+git config --global user.email "shrehakumaribsccse25@rvu.edu.in" 
 git config --list
 
 #5 initialize a new git repo & commit a sample file
@@ -33,7 +33,7 @@ git checkout new-feature
 git checkout main
 git branch -d new-feature
 git clone https://github.com/srujanashreyarajubsccse25-bit/CS1105.git
-cd CS1105/
+cd CS1105
 git remote add upstream https://github.com/srujanashreyarajubsccse25-bit/CS1105.git
 git checkout -b fix-typo
 touch README.md
@@ -43,14 +43,15 @@ git push origin fix-typo
 
 #10 create feature branches, switch them & merge them using git
 mkdir merge-conflict-demo
-git init merge-conflict-demo
 cd merge-conflict-demo
+git init
 echo "Once upon a time, there was a coder." > story.txt
 git add story.txt
 git commit -m "Initial commit with story"
 git checkout -b feature-A
 echo "They loved working with git." >> story.txt
 git commit -am "Changes by feature-A"
+git checkout main/master
 git checkout -b feature-B
 echo "They enjoyed solving puzzles." >> story.txt
 git commit -am "Changes by feature-B"
@@ -59,11 +60,12 @@ git commit -am "Changes by feature-B"
 git checkout master
 git merge feature-A
 git merge feature-B
+# open file & remove >>> feature-A <<< HEAD <<< feature-B
 git add story.txt
 git commit -m "Merge conflict resolved"
-# also open file & remove >>> feature-A <<< HEAD <<< feature-B
 
 #12 use git stash to save and apply temporary changes during development
+echo ‘Hello’ >hello.txt
 git checkout -b future-login
 echo "// temporary changes" > hello.txt
 git stash
@@ -72,11 +74,13 @@ git stash pop
 
 #13 rebase a feature branch onto main branch using git rebase
 echo "Welcome" > hello.txt
+git add hello.txt
+git commit -m ‘Added hello.txt’
 git checkout -b feature-payment
 git checkout main
 echo "Update" >> hello.txt
-git add main.txt
-git commit -m "Update in main"
+git add hello.txt
+git commit -m "Update in hello.txt"
 git checkout feature-payment
 git rebase main
 
@@ -100,10 +104,9 @@ git push origin --tags
 git checkout v1.0
 
 #15 setup copilot in VS Code & generate code for simple functions
-git ✓
-VS Code ✓
+Install git ✓
+Install VS Code ✓
 Login VS Code with GitHub account
 Extensions → GitHub Copilot ✓
 Code file open ✓✓
 Preferences → Copilot → adjust settings
-
